@@ -60,7 +60,7 @@ k3d is a tool for creating local Kubernetes clusters in Docker containers using 
 
 In the demonstration, we showcase the deployment of a "Hello World" application on Kubernetes using k3d. We illustrate the ease of cluster creation, deployment, and management using k3d.
 
-[![asciicast](https://asciinema.org/a/TtolsbmQZZVO7dm1BjqQ1CZZa.svg)](https://asciinema.org/a/TtolsbmQZZVO7dm1BjqQ1CZZa)
+![DEMO](https://github.com/andrefanatic/AsciiArtify/doc/img/demo.gif)
 
 ## Conclusion
 
