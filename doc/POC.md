@@ -48,14 +48,14 @@ Let's create an application using the graphical interface. Now, applications con
 5. **Create an application using the graphical interface. Now, configured applications in ArgoCD will automatically install and update in Kubernetes.**
 
    Click + NEW APP
-   ![argo-dashsboard](https://github.com/andrefanatic/AsciiArtify/doc/img/argo-dash-1.png)
+   ![argo-dashsboard](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-dash-1.png)
 
    Enter the application name demo
    Select the project to which the application belongs by default
    Leave the synchronization type as Manual
    In the SYNC OPTIONS section, specify how the application will synchronize with the repository. Here it is important to instruct ArgoCD to create a new namespace since Helm removed this feature by default. Check AUTO-CREATE NAMESPACE.
 
-   ![argo-app-creation](https://github.com/andrefanatic/AsciiArtify/doc/img/argo-newapp-1.png)
+   ![argo-app-creation](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-newapp-1.png)
 
 
    In the SOURCE section, leave the source type as GIT
@@ -64,14 +64,14 @@ Let's create an application using the graphical interface. Now, applications con
    helm
    In the DESTINATION section, specify the URL of the local cluster and the demo Namespace, after which ArgoCD will automatically determine the application parameters using the manifests located in the repository. If desired, you can manually change their values in the PARAMETERS section.
 
-   ![argo-app-creation](https://github.com/andrefanatic/AsciiArtify/doc/img/argo-newapp-2.png)
+   ![argo-app-creation](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-newapp-2.png)
 
    Create the application by clicking CREATE
 
 6. **Review the details of the deployed application by clicking on it in the list.**
 
    The graphical interface provides a hierarchical view of program components, their deployment, and the current state in the cluster.
-   ![argo-cluster-view](https://github.com/andrefanatic/AsciiArtify/doc/img/argo-cluster-view.png)
+   ![argo-cluster-view](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-cluster-view.png)
 
 
 7. **Application synchronization**
@@ -79,15 +79,15 @@ Let's create an application using the graphical interface. Now, applications con
    To do this, in the application details window, click SYNC
    On the right, a window will appear where you need to select the components and synchronization modes, then click SYNCHRONIZE
    After the process is complete, you can verify the correctness of the application deployment by checking its status in the cluster.
-   ![argo-app-synchronization](https://github.com/andrefanatic/AsciiArtify/doc/img/argo-sync-2.png)
+   ![argo-app-synchronization](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-sync-2.png)
 
 8. **Observe ArgoCD's reaction to changes in the repository.**
 
    Change the type of gateway from LoadBalancer to NodePort in the helm values.file at the repository https://github.com/andrefanatic/go-ascii-app/blob/master/helm/values.yaml (last line of the file)
-   ![argo-repo-update](https://github.com/andrefanatic/AsciiArtify/doc/img/update-source-repo.png)
+   ![argo-repo-update](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/update-source-repo.png)
 
    The synchronization process initiated will fetch the latest version from the git repository and compare it with the current state. Thus, we see that the service type for ambassador has changed from NodePort to LoadBalancer, and accordingly, the Kubernetes manifest has been updated.
-   ![argo-app-resync](https://github.com/andrefanatic/AsciiArtify/doc/img/argo-out-of-sync.png)
+   ![argo-app-resync](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-out-of-sync.png)
 
 ## Conclusion
 
