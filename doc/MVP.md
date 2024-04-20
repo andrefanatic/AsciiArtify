@@ -8,10 +8,10 @@ The MVP will include essential features such as image-to-ascii conversion, user 
 
 We have not implemented automatic synchronization in POC, but we can enable this option in two ways:
 
-1. using the GUI, click on `Details` of your application and find `SYNC POLICY`
+1. With the GUI, click on `Details` of your application and find `SYNC POLICY`
    ![argo-cluster-view](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/auto-sync-policy.png)
 
-2. using the kubectl CLI:
+2. Using the kubectl CLI:
     - first check which synchronization settings are active
     ```
     ➜ kubectl get app asciiartify -n argocd -o=jsonpath='{.spec.syncPolicy}'
