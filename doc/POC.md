@@ -60,8 +60,10 @@ Let's create an application using the graphical interface. Now, applications con
 
    In the SOURCE section, leave the source type as GIT
    Enter the repository URL containing the manifests for deployment, for example, https://github.com/andrefanatic/go-ascii-app (there will be Helm charts, or a package of manifests representing a group of Kubernetes objects for our application)
+
    In the Path field, enter the path to the helm directory
    helm
+   
    In the DESTINATION section, specify the URL of the local cluster and the demo Namespace, after which ArgoCD will automatically determine the application parameters using the manifests located in the repository. If desired, you can manually change their values in the PARAMETERS section.
 
    ![argo-app-creation](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-newapp-2.png)
