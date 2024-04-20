@@ -47,26 +47,26 @@ Let's create an application using the graphical interface. Now, applications con
 
 5. **Create an application using the graphical interface. Now, configured applications in ArgoCD will automatically install and update in Kubernetes.**
 
-   - Click + NEW APP
+   - Click + `NEW APP`
    ![argo-dashsboard](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-dash-1.png)
 
-   - Enter the application name demo
-   - Select the project to which the application belongs by default
-   - Leave the synchronization type as Manual
-   - In the SYNC OPTIONS section, specify how the application will synchronize with the repository. Here it is important to instruct ArgoCD to create a new namespace since Helm removed this feature by default. Check AUTO-CREATE NAMESPACE.
+   - Enter the `application name`
+   - Select the `project` to which the application belongs by default
+   - Leave the synchronization type as `Manual`
+   - In the `SYNC OPTIONS` section, specify how the application will synchronize with the repository. Here it is important to instruct ArgoCD to create a new namespace since Helm removed this feature by default. Check `AUTO-CREATE NAMESPACE`.
 
    ![argo-app-creation](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-newapp-1.png)
 
 
-   - In the SOURCE section, leave the source type as GIT
-   - Enter the repository URL containing the manifests for deployment, for example, https://github.com/andrefanatic/go-ascii-app (there will be Helm charts, or a package of manifests representing a group of Kubernetes objects for our application)
-   - In the Path field, enter the path to the helm directory "helm"
+   - In the `SOURCE` section, leave the source type as `GIT`
+   - Enter the repository `URL` containing the manifests for deployment, for example, https://github.com/andrefanatic/go-ascii-app (there will be Helm charts, or a package of manifests representing a group of Kubernetes objects for our application)
+   - In the `Path` field, enter the path to the helm directory `"helm"`
 
-   - In the DESTINATION section, specify the URL of the local cluster and the demo Namespace, after which ArgoCD will automatically determine the application parameters using the manifests located in the repository. If desired, you can manually change their values in the PARAMETERS section.
+   - In the `DESTINATION` section, specify the URL of the local cluster and the demo Namespace, after which ArgoCD will automatically determine the application parameters using the manifests located in the repository. If desired, you can manually change their values in the `PARAMETERS` section.
 
    ![argo-app-creation](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-newapp-2.png)
 
-   - Create the application by clicking CREATE
+   - Create the application by clicking `CREATE`
 
 6. **Review the details of the deployed application by clicking on it in the list.**
 
@@ -76,8 +76,8 @@ Let's create an application using the graphical interface. Now, applications con
 
 7. **Application synchronization**
 
-   - To do this, in the application details window, click SYNC
-   - On the right, a window will appear where you need to select the components and synchronization modes, then click SYNCHRONIZE
+   - To do this, in the application details window, click `SYNC`
+   - On the right, a window will appear where you need to select the components and synchronization modes, then click `SYNCHRONIZE`
    - After the process is complete, you can verify the correctness of the application deployment by checking its status in the cluster.
    ![argo-app-synchronization](https://github.com/andrefanatic/AsciiArtify/blob/main/doc/img/argo-sync-2.png)
 
