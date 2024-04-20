@@ -21,7 +21,7 @@ We have not implemented automatic synchronization in POC, but we can enable this
     ```
     ➜ kubectl patch app asciiartify -n argocd -p '{"spec": {"syncPolicy": {"automated": {}}}}' --type=merge
     ```
-    - command execution description:
+    Command execution description:
     * `kubectl patch` This command is used to change part of the configuration of a Kubernetes resource. In our case, we are going to change the configuration of the ArgoCD application.
     * `app asciiartify` This is the name of the application we want to change.
     * `-n argocd` This option specifies the namespace in which the application is located.
